@@ -1,3 +1,21 @@
-.title {
-    color:red
+$backgroundColor: rgb(160, 187, 114);
+body {
+    background-color: $backgroundColor;
+}
+.containerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .inputContainer {
+     width:30%;
+     display: flex;
+     justify-content: space-between; 
+     margin-bottom: 2vw;
+    }
+
+    .addButton {
+    margin-left: 2vw;
+    }
 }

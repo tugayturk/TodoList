@@ -1,11 +1,9 @@
-import "./style/style.scss"
-import Button from '@mui/material/Button';
+import "./style/style.scss";
+import TodoList from "./components/TodoList";
 function App() {
   return (
     <div className="App">
-      <div className="title">Title</div>
-      <Button variant="contained">Hello World</Button>
-      Todo
+      <TodoList />
     </div>
   );
 }
