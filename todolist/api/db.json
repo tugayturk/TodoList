@@ -1,0 +1,7 @@
+{
+    "todos": [
+      { "id": 1, "content": "todo1", "status": "Done" },
+      { "id": 2, "content": "todo2", "status": "Open" }
+
+    ]
+  }
