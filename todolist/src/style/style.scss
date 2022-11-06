@@ -1,12 +1,13 @@
-$backgroundColor: rgb(160, 187, 114);
+@import "./variable.scss";
+@import "./mixin.scss";
 body {
     background-color: $backgroundColor;
+    height: 100vh;
 }
+
 .containerDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    @include display(flex,center,center,column);
 
     .inputContainer {
      width:30%;
@@ -14,8 +15,34 @@ body {
      justify-content: space-between; 
      margin-bottom: 2vw;
     }
-
     .addButton {
     margin-left: 2vw;
     }
+    .todoList {
+        background-color: transparent;
+        @include display(flex,center,center,column);
+    }
+    .todoItem{
+        border: 1px solid rgb(121, 114, 114);
+        margin-bottom: 1vw;
+        border-radius: 20px;
+        font-style:italic;
+       
+        &:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    }
 }
+
+
+@include mq(tablet, max) {
+    .inputContainer {
+    @include display(flex,center,center,column);
+    .inputField{
+        margin-bottom: 1vh;
+       }
+       .addButton{
+           width: 50%;
+       }
+    }
+  }

@@ -9,6 +9,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Tooltip,
 } from "@mui/material";
 
 function Todo({ todos, setTodos }) {
@@ -40,12 +41,13 @@ function Todo({ todos, setTodos }) {
 
   };
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <List className="todoList" sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       {todos.map((todo) => {
         const labelId = `checkbox-list-label-${todo}`;
 
         return (
           <ListItem
+          className="todoItem"
             key={todo.id}
             secondaryAction={
               <IconButton
@@ -53,7 +55,9 @@ function Todo({ todos, setTodos }) {
                 aria-label="comments"
                 onClick={() => deleteTodo(todo.id)}
               >
-                <DeleteIcon />
+                <Tooltip title="Delete" placement="top-end">
+                <DeleteIcon sx={{ color: "#E91E63" }} />
+                </Tooltip>
               </IconButton>
             }
             disablePadding

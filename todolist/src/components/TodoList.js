@@ -36,8 +36,9 @@ function TodoList() {
       <div className="inputContainer">
       <Input
         id="standard-basic"
-        label="Text a ToDo"
+        placeholder="Text a ToDo"
         variant="standard"
+        className="inputField"
         fullWidth
         value={newTodo}
         onChange={setTodoContent}
