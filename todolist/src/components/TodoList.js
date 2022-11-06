@@ -31,19 +31,19 @@ function TodoList() {
   };
 
   return (
-    <div className="containerDiv">
+    <div className="container">
       <h3>TodoList</h3>
-      <div className="inputContainer">
+      <div className="wrapper">
       <Input
         id="standard-basic"
         placeholder="Text a ToDo"
         variant="standard"
-        className="inputField"
+        className="wrapper__input"
         fullWidth
         value={newTodo}
         onChange={setTodoContent}
       />
-      <Button className="addButton" variant="contained" onClick={createTodo}>
+      <Button className="wrapper__button" variant="contained" onClick={createTodo}>
         Add
       </Button>
       </div>

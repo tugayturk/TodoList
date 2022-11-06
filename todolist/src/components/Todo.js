@@ -20,7 +20,6 @@ function Todo({ todos, setTodos }) {
   };
 
   const handleDone = (e,value) => {
-    console.log(e.target.checked);
     const data = {
       id: value.id,
       content: value.content,
@@ -47,7 +46,7 @@ function Todo({ todos, setTodos }) {
 
         return (
           <ListItem
-          className="todoItem"
+          className="todoList__item"
             key={todo.id}
             secondaryAction={
               <IconButton

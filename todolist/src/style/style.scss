@@ -1,48 +1,50 @@
 @import "./variable.scss";
 @import "./mixin.scss";
 body {
-    background-color: $backgroundColor;
-    height: 100vh;
+  background-color: $backgroundColor;
+  height: 100vh;
 }
 
-.containerDiv {
-    height: 100%;
-    @include display(flex,center,center,column);
+.container {
+  height: 100%;
+  @include display(flex, center, center, column);
 
-    .inputContainer {
-     width:30%;
-     display: flex;
-     justify-content: space-between; 
-     margin-bottom: 2vw;
-    }
-    .addButton {
-    margin-left: 2vw;
-    }
-    .todoList {
-        background-color: transparent;
-        @include display(flex,center,center,column);
-    }
-    .todoItem{
-        border: 1px solid rgb(121, 114, 114);
-        margin-bottom: 1vw;
-        border-radius: 20px;
-        font-style:italic;
-       
-        &:hover{
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
-    }
-}
+  .wrapper {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vw;
 
-
-@include mq(tablet, max) {
-    .inputContainer {
-    @include display(flex,center,center,column);
-    .inputField{
-        margin-bottom: 1vh;
-       }
-       .addButton{
-           width: 50%;
-       }
+    &__button {
+      margin-left: 2vw;
     }
   }
+
+  .todoList {
+    background-color: transparent;
+    @include display(flex, center, center, column);
+
+    &__item {
+      border: 1px solid rgb(121, 114, 114);
+      margin-bottom: 1vw;
+      border-radius: 20px;
+      font-style: italic;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+  }
+}
+
+@include mq(tablet, max) {
+  .wrapper {
+    @include display(flex, center, center, column);
+    &__input {
+      margin-bottom: 1vh;
+    }
+    &__button {
+      width: 50%;
+    }
+  }
+}
